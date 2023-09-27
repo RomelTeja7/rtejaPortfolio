@@ -1,0 +1,111 @@
+{
+  "es": {
+    "about": {
+      "skills": "HABILIDADES",
+      "projects": "PROYECTOS",
+      "contact": "CONTACTO",
+      "services": "SERVICIOS",
+      "block1_0": "Corriendo hacia mis sueños",
+      "block1_1": "Hola!",
+      "block1_2": "Mi nombre es Romel",
+      "description": "Soy un Desarrollador Jr. enfocado en el área Backend pero también con habilidades Frontend, con la formación de Técnico en Ingeniería en Computación en la Universidad Don Bosco en El Salvador. Poseo habilidades utilizando diversos lenguajes de programación y tecnologías como Java, PHP y Spring Boot, también en bases de datos como MySQL y MongoDB."
+    },
+    "skills": {
+      "title": "HABILIDADES TÉCNICAS",
+      "description": "Mis principales",
+      "level": "Nivel básico"
+    },
+    "inProcessSkills": {
+      "title": "Habilidades",
+      "description": "EN PROCESO"
+    },
+    "projects": {
+      "description": "MIS PROYECTOS",
+      "pr1": "SURGERY MANAGER",
+      "pr1_1": "PHP",
+      "pr2": "PHPMAILER FORM",
+      "pr2_1": "PHP",
+      "pr3": "MONEY MANAGER",
+      "pr3_1": "JAVA",
+      "pr4": "TASKTEAM",
+      "pr4_1": "SPRING BOOT",
+      "pr5": "USER CRUD",
+      "pr5_1": "JAVA EE"
+    },
+    "quote": {
+      "title": "FRASE",
+      "text": "'Fallar, siempre es una gran oportunidad para mejorar.'"
+    },
+    "servicess": {
+      "title": "SERVICIOS",
+      "s1": "Paginas web de publicidad",
+      "s2": "Aplicaciones logicas",
+      "s3": "Aplicaciones de inventario"
+    },
+    "contact": {
+      "title": "CONTÁCTAME!",
+      "email": "--> romelteja7.dev@gmail.com <--",
+      "location": "San Salvador, El Salvador",
+      "sm": "Redes Sociales",
+      "arrow": "⬇️"
+    },
+    "buttons": {
+      "es": "ES"
+    }
+  },
+  "en": {
+    "about": {
+      "skills": "SKILLS",
+      "projects": "PROJECTS",
+      "contact": "CONTACT",
+      "services": "SERVICES",
+      "block1_0": "Running to my dreams",
+      "block1_1": "Hi!",
+      "block1_2": "My name is Romel",
+      "description": "I'm a Jr. Developer focused on the Backend area but also with Frontend skills, with studies in Technical Computer Engineering at the Don Bosco University in El Salvador. I have skills in different programming languages and technologies such as Java, PHP and Spring Boot, also in databases such as MySQL and MongoDB."
+    },
+    "skills": {
+      "title": "TECHNICAL SKILLS",
+      "description": "My main ",
+      "level": "Basic level"
+    },
+    "inProcessSkills": {
+      "title": "Skills",
+      "description": "IN PROCESS"
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "MY PROJECTS",
+      "pr1": "SURGERY MANAGER",
+      "pr1_1": "PHP",
+      "pr2": "PHPMAILER FORM",
+      "pr2_1": "PHP",
+      "pr3": "MONEY MANAGER",
+      "pr3_1": "JAVA",
+      "pr4": "TASKTEAM",
+      "pr4_1": "SPRING BOOT",
+      "pr5": "USER CRUD",
+      "pr5_1": "JAVA EE"
+    },
+    "quote": {
+      "title": "PHRASE",
+      "text": "'Failing is always a great opportunity for improvement.'"
+    },
+    "servicess": {
+      "title": "SERVICES",
+      "s1": "Advertising websites",
+      "s2": "Logistics apps",
+      "s3": "Inventory apps"
+    },
+    "contact": {
+      "title": "CONTACT ME!",
+      "email": "--> romelteja7.dev@gmail.com <--",
+      "location": "San Salvador, El Salvador",
+      "sm": "Social Media",
+      "arrow": "⬇️"
+    },
+    "buttons": {
+      "en": "EN"
+    }
+  }
+}

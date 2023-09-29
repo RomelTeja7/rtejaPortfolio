@@ -38,16 +38,13 @@
     },
     "servicess": {
       "title": "SERVICIOS",
-      "s1": "Paginas web de publicidad",
+      "s1": "Sitios web publicitarios",
       "s2": "Aplicaciones logicas",
-      "s3": "Aplicaciones de inventario"
+      "s3": "Gestores de datos"
     },
     "contact": {
       "title": "CONTÁCTAME!",
-      "email": "--> romelteja7.dev@gmail.com <--",
-      "location": "San Salvador, El Salvador",
-      "sm": "Redes Sociales",
-      "arrow": "⬇️"
+      "email": "romelteja7.dev@gmail.com"
     },
     "buttons": {
       "es": "ES"
@@ -95,14 +92,11 @@
       "title": "SERVICES",
       "s1": "Advertising websites",
       "s2": "Logistics apps",
-      "s3": "Inventory apps"
+      "s3": "Data managers"
     },
     "contact": {
       "title": "CONTACT ME!",
-      "email": "--> romelteja7.dev@gmail.com <--",
-      "location": "San Salvador, El Salvador",
-      "sm": "Social Media",
-      "arrow": "⬇️"
+      "email": "romelteja7.dev@gmail.com"
     },
     "buttons": {
       "en": "EN"

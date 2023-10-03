@@ -30,7 +30,9 @@
       "pr4": "TASKTEAM",
       "pr4_1": "SPRING BOOT",
       "pr5": "USER CRUD",
-      "pr5_1": "JAVA EE"
+      "pr5_1": "JAVA EE / MYSQL",
+      "pr6": "USER CRUD",
+      "pr6_1": "JAVA EE / MONGODB"
     },
     "quote": {
       "title": "FRASE",
@@ -82,7 +84,9 @@
       "pr4": "TASKTEAM",
       "pr4_1": "SPRING BOOT",
       "pr5": "USER CRUD",
-      "pr5_1": "JAVA EE"
+      "pr5_1": "JAVA EE / MYSQL",
+      "pr6": "USER CRUD",
+      "pr6_1": "JAVA EE / MONGODB"
     },
     "quote": {
       "title": "PHRASE",

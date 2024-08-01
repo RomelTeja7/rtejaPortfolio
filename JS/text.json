@@ -1,0 +1,106 @@
+{
+  "es": {
+    "about": {
+      "skills": "HABILIDADES",
+      "projects": "PROYECTOS",
+      "contact": "CONTACTO",
+      "services": "SERVICIOS",
+      "block1_0": "Corriendo hacia mis sueños",
+      "block1_1": "Hola!",
+      "block1_2": "Mi nombre es Romel",
+      "description": "Soy un apasionado desarrollador de 22 años originario de El Salvador, graduado como Técnico en Ingeniería en Computación de la Universidad Don Bosco en El Salvador. Mi enfoque se centra principalmente en el área Backend, sin embargo, también tengo habilidades en el área Frontend. Mi sólida formación técnica se complementa con experiencia práctica. ¡Anhelo seguir creciendo y contribuyendo al mundo del desarrollo de software!"
+    },
+    "skills": {
+      "title": "HABILIDADES TÉCNICAS",
+      "description": "Mis principales"
+    },
+    "inProcessSkills": {
+      "title": "EN APRENDIZAJE",
+      "description": "Habilidades"
+    },
+    "projects": {
+      "description": "MIS PROYECTOS",
+      "pr1": "SURGERY MANAGER",
+      "pr1_1": "PHP",
+      "pr2": "MONEY MANAGER",
+      "pr2_1": "JAVA - Old project ;)",
+      "pr3": "TASKTEAM",
+      "pr3_1": "SPRING BOOT",
+      "pr4": "PASSWORD GENERATOR",
+      "pr4_1": "JAVASCRIPT"
+    },
+    "backend": {
+      "description": "DESARROLLO BACKEND",
+      "bk1": "WEB SERVICE RESTful",
+      "bk1_1": "JAVA EE / JAVASCRIPT",
+      "bk2": "CRUD",
+      "bk2_1": "JAVA EE / MYSQL",
+      "bk3": "CRUD",
+      "bk3_1": "JAVA EE / MONGODB",
+      "bk4": "WEB SERVICE",
+      "bk4_1": "PHP",
+      "bk5": "CRUD",
+      "bk5_1": "LARAVEL"
+    },
+    "quote": {
+      "title": "MI FILOSOFÍA",
+      "text": "'Fallar, siempre es una gran oportunidad para mejorar.'"
+    },
+    "buttons": {
+      "es": "ES"
+    }
+  },
+  "en": {
+    "about": {
+      "skills": "SKILLS",
+      "projects": "PROJECTS",
+      "contact": "CONTACT",
+      "services": "SERVICES",
+      "block1_0": "Running to my dreams",
+      "block1_1": "Hi!",
+      "block1_2": "My name is Romel",
+      "description": "I am a passionate 22-year-old developer from El Salvador, with a degree in Computer Engineering from Don Bosco University in El Salvador. My focus is primarily on backend development, but I also have skills in frontend. My strong technical background is complemented by practical experience. I am eager to continue growing and contributing to the world of software development!"
+    },
+    "skills": {
+      "description": "My main",
+      "title": "TECHNICAL SKILLS"
+    },
+    "inProcessSkills": {
+      "description": "Learning",
+      "title": "SKILLS"
+    },
+    "projects": {
+      "description": "MY PROJECTS",
+      "pr1": "SURGERY MANAGER",
+      "pr1_1": "PHP",
+      "pr2": "MONEY MANAGER",
+      "pr2_1": "JAVA - Old project ;)",
+      "pr3": "TASKTEAM",
+      "pr3_1": "SPRING BOOT",
+      "pr4": "PASSWORD GENERATOR",
+      "pr4_1": "JAVASCRIPT"
+    },
+    "backend": {
+      "description": "BACKEND DEVELOPMENT",
+      "bk1": "WEB SERVICE RESTful",
+      "bk1_1": "JAVA EE / JAVASCRIPT",
+      "bk2": "CRUD",
+      "bk2_1": "JAVA EE / MYSQL",
+      "bk3": "CRUD",
+      "bk3_1": "JAVA EE / MONGODB",
+      "bk4": "WEB SERVICE",
+      "bk4_1": "PHP",
+      "bk5": "CRUD",
+      "bk5_1": "LARAVEL",
+      "bk6": "WEB SERVICE RESTful",
+      "bk6_1": "PHP / LARAVEL"
+    },
+    "quote": {
+      "title": "MY PHILOSOPHY",
+      "text": "'Failing is always a great opportunity to improve.'"
+    },
+    "buttons": {
+      "en": "EN"
+    }
+  }
+}

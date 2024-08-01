@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bienvenido a mi repositorio web, donde encontraras informacion sobre mi">
+  <title>Romel Tejada</title>
+  <link rel="icon" type="image/x-icon" href="Images/imgIco/LogoFondo.ico">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+  </style>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .close {
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .modal-text {
+      margin-bottom: 20px;
+    }
+
+    .modal-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .modal-text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .modal-buttons {
+      text-align: center;
+    }
+  </style>
+  <style>
+    .header {
+      background-color: #fff;
+      box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+      position: fixed;
+      width: 100%;
+      z-index: 3;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #name {
+      border-bottom: 2px solid white;
+      animation: blink 1s step-end infinite;
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    @keyframes blink {
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: rgb(255, 0, 255);
+      }
+    }
+
+
+    .header.hidden {
+      transform: translateY(-100%);
+    }
+
+    .buttonMenu {
+      cursor: pointer;
+      background: none;
+      border: 0;
+      color: inherit;
+    }
+
+    .header ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+
+    }
+
+    .header li a {
+      display: block;
+      padding: 20px 20px;
+      text-decoration: none;
+    }
+
+    .header .logo {
+      font-weight: bold;
+      display: block;
+      float: left;
+      padding: 20px 20px;
+      text-decoration: none;
+    }
+
+
+    .header .menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height .2s ease-in-out;
+
+    }
+
+    .bar-menu {
+      padding: 14px 18px 0px 0px;
+    }
+
+
+    @media (min-width: 1146px) {
+      .header li {
+        float: left;
+      }
+
+      .header li a {
+        padding: 20px 30px;
+      }
+
+      .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+
+      .buttonMenu {
+        visibility: hidden;
+      }
+
+    }
+  </style>  
+  <style>
+    body {
+      font-family: "JetBrains Mono", monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    .centers {
+      text-align: end;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 90em;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.125rem;
+    }
+
+    .h1W {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .img-text {
+      color: black;
+      padding: 20px;
+    }
+
+    .img-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .img-text p {
+      font-size: 16px;
+    }
+
+    /*Second image and info*/
+    .img-main2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .img-main2 .imag-down {
+      margin-top: 20px;
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-radius: 0;
+    }
+
+    /*CARDS*/
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      margin-bottom: 32px;
+    }
+
+    .aus {
+      padding-top: 10px;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .textAus {
+      text-align: justify;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background-color: black;
+      color: white;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 5px 5px 0px 0px;
+    }
+
+    .containers {
+      margin: 0 auto;
+      max-width: 100%;
+      width: 90em;
+    }
+
+    .image-grid {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .image-grid2 {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .image-grid3 {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      gap: 1rem;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .card {
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 6px;
+      text-align: center;
+      margin-left: 30px;
+      margin-right: 30px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .card2 {
+      margin-top: 30px;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 5px;
+      text-align: center;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .card3 {
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    input[type=text],
+    .butt {
+      height: 40px;
+      font-size: 1em;
+    }
+
+    textarea {
+      height: 120px;
+      font-size: 1.2em;
+    }
+
+    .img-contact {
+      width: 60%;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 0;
+    }
+
+    input[type="text"],
+    textarea,
+    .butt {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+
+    form {
+      margin-right: 10px;
+    }
+
+    .imgMain {
+      width: 30%;
+      height: 30%;
+    }
+
+    .imgS {
+      width: 12%;
+      height: 10%;
+      border-radius: 0;
+    }
+
+    .imgHC {
+      width: 10%;
+      border-radius: 0;
+      height: 10%;
+    }
+
+    .imgSM {
+      width: 40px;
+      border-radius: 0;
+    }
+
+    .mainText p {
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-bottom: 0;
+    }
+
+    .block {
+      height: 100%;
+      text-align: center;
+      font-weight: bolder;
+    }
+
+    .block1 {
+      margin-top: 42px;
+      text-align: justify;
+    }
+
+    #block1_0,
+    #block1_1,
+    #block1_2,
+    #mainText1 {
+      margin-left: 100px;
+      font-weight: bolder;
+      margin-right: 100px;
+    }
+
+    #block1_0,
+    #skills-description,
+    #in-process-skills-description,
+    #projects-description,
+    #backend-description,
+    #quote-title,
+    #servicees {
+      font-weight: bolder;
+      margin-top: 0px;
+      padding-top: 50px;
+    }
+
+    #projects-description,
+    #backend-description,
+    #servicees {
+      padding-bottom: 50px;
+    }
+
+    .contenedor3,
+    .contenedor2,
+    .image-grid,
+    .mainText,
+    .image-grid3 {
+      padding-bottom: 50px;
+      margin-bottom: 0px;
+    }
+
+    #email,
+    #location,
+    #socialM {
+      font-size: 1.3em;
+    }
+
+    #contactM {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 400px) {
+      .image-grid3 {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .card:hover {
+        transform: none;
+      }
+    }
+
+    @media (min-width: 500px) {
+      .image-grid3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card:hover {
+        transform: none;
+      }
+
+      .image-grid2 {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      #email,
+      #location,
+      #socialM {
+        font-size: 1.2em;
+      }
+
+      .mainText {
+        font-size: 13px;
+        text-align: justify;
+        font-weight: bolder;
+      }
+
+      #block1_0,
+      #block1_1,
+      #block1_2,
+      #mainText1 {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .h1W {
+        font-size: 23px;
+        margin: 0;
+      }
+
+      .asc {
+        font-size: 13px;
+      }
+
+      .card {
+        margin: 10px;
+      }
+
+      .img-main {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(/img/banner.jpg);
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        padding-top: 70%;
+        margin-bottom: 50px;
+      }
+
+      .textAus {
+        font-size: 1em;
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .img-text {
+        padding: 0px;
+      }
+
+      .myNav {
+        visibility: hidden;
+      }
+
+      .img-main3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .img-main3 .imag-down {
+        margin-top: 50px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        border-radius: 0;
+      }
+
+
+      .imgS {
+        width: 14%;
+        height: 15%;
+      }
+
+      .imgHC {
+        width: 11%;
+        height: 11%;
+      }
+
+    }
+    @media (min-width: 769px) {
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .image-grid2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .image-grid3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+
+      p {
+        font-size: 0.9em;
+      }
+
+      .imgS {
+        width: 9%;
+        height: 10%;
+      }
+
+      .imgHC {
+        width: 8%;
+        height: 8%;
+      }
+
+    }
+    @media (min-width: 1280px) {
+      .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .image-grid2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .image-grid3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+
+      .imgS {
+        width: 9%;
+        height: 10%;
+      }
+
+      .imgHC {
+        width: 8%;
+        height: 8%;
+      }
+
+    }
+
+    footer {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-weight: bolder;
+      text-align: center;
+      padding: 20px 0;
+      clear: both;
+    }
+  </style>
+  <title>romelteja7</title>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="centers">
+      <a href="#" class="logo">Romel Tejad<span id="name">a</span> ;)</a>
+      <button class="buttonMenu" id="buttonMenu" title="Menu"><img class="bar-menu" id="icono" height="32" width="32"
+          alt=""></button>
+      <ul class="menu" id="menu">
+        <li><a title="skills" class="list1" id="skills" href="#" onclick="scrollToContainerSkills(event)"></a></li>
+        <li><a title="projects" class="list1" id="projectsmain" href="#" onclick="scrollToContainerProjects(event)"></a>
+        </li>
+
+        <li><a id="boton" style="cursor: pointer;"></a></li>
+        <li><a id="theme-btn" style="cursor: pointer;"></a></li>
+      </ul>
+  </header>
+
+  <div class="containers" id="ab">
+    <br>
+    <div class="block1" id="block1">
+      <p id="block1_0"></p>
+      <h1 id="block1_1" class="h1W" id="h1W"></h1>
+      <h1 id="block1_2" class="h1W" id="h1W"></h1>
+      <div class="contenedor">
+        <p id="mainText1" class="mainText"></p>
+      </div>
+    </div>
+
+    <div class="block" id="block2">
+      <p id="skills-description"></p>
+      <h1 id="skills-title" class="h1W" id="h1W"></h1>
+      <div class="contenedor2">
+        <br>
+        <br>
+        <img class="imgHC" src="Images/imgMain/html.webp" alt="HTML">
+        <img class="imgS" src="Images/imgMain/java.webp" alt="Java">
+        <img class="imgS" src="Images/imgMain/PHP.webp" alt="PHP">
+        <img class="imgS" src="Images/imgMain/javascript.webp" alt="JavaScript">
+        <img class="imgS" src="Images/imgMain/git.webp" alt="GIT">
+        <img class="imgS" src="Images/imgMain/springboot.webp" alt="SpringBoot">
+        <img class="imgS" src="Images/imgMain/SQL.webp" alt="SQL">
+        <img class="imgHC" src="Images/imgMain/css.webp" alt="CSS">
+      </div>
+    </div>
+
+    <div style="flex-grow: 1;">
+      <div class="block" id="block3">
+        <p id="in-process-skills-description"></p>
+        <h1 id="in-process-skills-title" class="h1W" id="h1W"></h1>
+        <div class="contenedor3">
+          <br>
+          <br>
+          <img class="imgS" src="Images/imgSkills/Laravel.webp" alt="Laravel">  
+          <img class="imgS" src="Images/imgSkills/Mongodb.webp" alt="MongoDB">
+      </div>
+    </div>
+
+    <div class="block" id="block4">
+      <h1 id="projects-description" class="h1W"></h1>
+      <div class="image-grid">
+        <div class="card" onclick="openProject(1)">
+          <img src="Images/imgProjects/project1.webp" alt="Imagen 1" width="100%" height="100%">
+          <h2 id="pr1"></h2>
+          <p id="pr1_1"></p>
+          <p></p>
+        </div>
+        <div class="card" onclick="openProject(2)">
+          <img src="Images/imgProjects/project2.webp" alt="Imagen 2" width="100%" height="100%">
+          <h2 id="pr2"></h2>
+          <p id="pr2_1"></p>
+        </div>
+        <div class="card" onclick="openProject(3)">
+          <img src="Images/imgProjects/project3.webp" alt="Imagen 3" width="100%" height="100%">
+          <h2 id="pr3"></h2>
+          <p id="pr3_1"></p>
+          <p></p>
+        </div>
+        <div class="card" onclick="openProject(4)">
+          <img src="Images/imgProjects/project4.webp" alt="Imagen 4" width="100%" height="100%">
+          <h2 id="pr4"></h2>
+          <p id="pr4_1"></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="block" id="block5">
+      <h1 id="backend-description" class="h1W"></h1>
+      <div class="image-grid">
+        <div class="card" onclick="openBackend(1)">
+          <img src="Images/imgBackend/backend1.webp" alt="Imagen 1" width="100%" height="100%">
+          <h2 id="bk1"></h2>
+          <p id="bk1_1"></p>
+          <p></p>
+        </div>
+        <div class="card" onclick="openBackend(2)">
+          <img src="Images/imgBackend/backend2.webp" alt="Imagen 2" width="100%" height="100%">
+          <h2 id="bk2"></h2>
+          <p id="bk2_1"></p>
+          <p></p>
+        </div>
+        <div class="card" onclick="openBackend(3)">
+          <img src="Images/imgBackend/backend3.webp" alt="Imagen 3" width="100%" height="100%">
+          <h2 id="bk3"></h2>
+          <p id="bk3_1"></p>
+          <p></p>
+        </div>
+        <div class="card" onclick="openBackend(4)">
+          <img src="Images/imgBackend/backend4.webp" alt="Imagen 4" width="100%" height="100%">
+          <h2 id="bk4"></h2>
+          <p id="bk4_1"></p>
+          <p></p>
+        </div>
+        <div class="card" onclick="openBackend(5)">
+          <img src="Images/imgBackend/backend5.webp" alt="Imagen 5" width="100%" height="100%">
+          <h2 id="bk5"></h2>
+          <p id="bk5_1"></p>
+          <p></p>
+        </div>
+        <div class="card" onclick="openBackend(6)">
+          <img src="Images/imgBackend/backend6.webp" alt="Imagen 6" width="100%" height="100%">
+          <h2 id="bk6"></h2>
+          <p id="bk6_1"></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+<!-- PROJECT MODAL-->
+    <div class="modal" id="projectModal1">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgProjects/project1.webp" alt="Imagen 1" width="100%" height="100%">
+          <h2>SURGERY MANAGER</h2>
+          <p>
+            Web application created with the objective of storing and keeping record and historyof dates and data for
+            surgeries.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/Surgeries-App', '_blank');">GitHub</button>
+            <button class="btn" onclick="closeProject(1)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="projectModal2">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgProjects/project2.webp" alt="Imagen 3" width="100%" height="100%">
+          <h2>MONEY MANAGER</h2>
+          <p>Simple test application to keep track of savings, which allows you to enter and withdraw "money" according to the expenses incurred.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/MoneyManager', '_blank');">GitHub </button>
+            <button class="btn" onclick="closeProject(2)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="projectModal3">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgProjects/project3.webp" alt="Imagen 4" width="100%" height="100%">
+          <h2>TASKTEAM</h2>
+          <p>Project to keep the control in tasks of the team, separate in Roles, Job type and groups of work.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/TaskTeam', '_blank');">GitHub </button>
+            <button class="btn" onclick="closeProject(3)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="projectModal4">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgProjects/project4.webp" alt="Imagen 4" width="100%" height="100%">
+          <h2>PASSWORD GENERATOR</h2>
+          <p>Password generator by introducing a keyword or just generate a random password, project created with javascript, html and css.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/PasswordGenerator', '_blank');">GitHub </button>
+            <button class="btn" onclick="closeProject(4)">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- BACKEND MODAL-->
+    <div class="modal" id="backendModal1">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgBackend/backend1.webp" alt="Imagen 1" width="100%" height="100%">
+          <h2>USERS - API REST</h2>
+          <p>Web APP using REST API Building with Java on Web Environment. This is a basic app, to watch how API REST
+            works making using a client, in this case, a client with JavaScript making use of the HTTP methods.
+          </p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/UserLogs-API-REST', '_blank');">GitHub</button>
+            <button class="btn" onclick="closeBackend(1)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="backendModal2">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgBackend/backend2.webp" alt="Imagen 2" width="100%" height="100%">
+          <h2>USER CRUD</h2>
+          <p>This application is a practical example of how to create a CRUD with JAVA EE in this case using a database MySQL.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/USER_CRUD', '_blank');">GitHub </button>
+            <button class="btn" onclick="closeBackend(2)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="backendModal3">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgBackend/backend3.webp" alt="Imagen 3" width="100%" height="100%">
+          <h2>USER CRUD</h2>
+          <p>This application is a practical example of how to create a CRUD with JAVA EE in this case using a JSON document with
+            MONGODB technology.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/USER_CRUD_MONGODB', '_blank');">GitHub</button>
+            <button class="btn" onclick="closeBackend(3)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="backendModal4">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgBackend/backend4.webp" alt="Imagen 4" width="100%" height="100%">
+          <h2>WEB SERVICE</h2>
+          <p>This application is a practical example of how to create a Web Service in PHP and make use of service.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/WebServicePHP', '_blank');">GitHub</button>
+            <button class="btn" onclick="closeBackend(4)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="backendModal5">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgBackend/backend5.webp" alt="Imagen 5" width="100%" height="100%">
+          <h2>CRUD</h2>
+          <p>This application is a practical example of how to create a CRUD with LARAVEL in this case using a database MySQL.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/LaravelApp', '_blank');">GitHub</button>
+            <button class="btn" onclick="closeBackend(5)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="backendModal6">
+      <div class="modal-content">
+        <div class="modal-text">
+          <img src="Images/imgBackend/backend6.webp" alt="Imagen 6" width="100%" height="100%">
+          <h2>WEB SERVICE RESTful</h2>
+          <p>This application is a practical example of how to consume in laravel a rest web service created in php.</p>
+          <p style="text-align: center;">More details on GitHub ↓</p>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn" role="link"
+            onclick="javascript:window.open('https://github.com/RomelTeja7/WebService-Client', '_blank');">GitHub</button>
+            <button class="btn" onclick="closeBackend(6)">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="block" id="block6">
+      <h1 id="quote-title" class="h1W" id="h1W"></h1>
+      <p id="quote-text" class="mainText" style="text-align: center; "></p>
+    </div>
+  </div>
+</body>
+<footer>
+  <div>
+    <a title="Github" target="_blank" href="https://github.com/RomelTeja7"> <img class="imgSM" id="gith" alt="Github"
+        height="40" width="42"></a>
+    <a title="Linkedin" target="_blank" href="https://linkedin.com/in/romelteja7"> <img class="imgSM" id="linke"
+        alt="Linkedin" height="40" width="42"></a>
+    <a title="Youtube" target="_blank" href="https://www.youtube.com/@rtejadev"> <img class="imgSM" id="yout"
+        alt="Youtube" height="40" width="42"></a>
+    <a title="Tiktok" target="_blank" href="https://www.tiktok.com/@rteja.dev"> <img class="imgSM" id="tikt"
+        alt="Tiktok" height="40" width="42"></a>
+    <a title="Instagram" target="_blank" href="https://www.instagram.com/rteja.dev/"> <img class="imgSM" id="insta"
+        alt="Instagram" height="40" width="42"></a>
+    <p>Terms of Use - Privacy Policy</p>
+    <p>© 2024 Romel Tejada</p>
+    <img class="imgSM" alt="logo" src="Images/imgSM/LogoFondo.svg" height="64" width="64">
+
+  </div>
+</footer>
+<script>
+  function openProject(cardNumber) {
+    document.getElementById('projectModal' + cardNumber).style.display = 'flex';
+  }
+  function openBackend(cardNumber) {
+    document.getElementById('backendModal' + cardNumber).style.display = 'flex';
+  }
+
+  function closeProject(cardNumber) {
+    document.getElementById('projectModal' + cardNumber).style.display = 'none';
+  }
+  function closeBackend(cardNumber) {
+  document.getElementById('backendModal' + cardNumber).style.display = 'none';
+  }
+  window.onclick = function (event) {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+      if (event.target == modals[i]) {
+        modals[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+<script>
+  const menuList = document.getElementById("menu");
+  const toggleButton = document.getElementById("buttonMenu");
+
+  function toggleOverflow() {
+    if (menuList.style.overflow === "visible") {
+      menuList.style.overflow = "hidden";
+    } else {
+      menuList.style.overflow = "visible";
+    }
+  }
+
+  toggleButton.addEventListener("click", toggleOverflow);
+
+
+  let prevScrollPos = window.pageYOffset;
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      header.classList.remove('hidden');
+    } else {
+      header.classList.add('hidden');
+    }
+    prevScrollPos = currentScrollPos;
+  });
+
+
+  function scrollToContainerSkills(event) {
+    toggleOverflow();
+    event.preventDefault();
+    var container = document.getElementById("block2");
+    container.scrollIntoView({ behavior: 'smooth' });
+  }
+  function scrollToContainerProjects(event) {
+    toggleOverflow();
+    event.preventDefault();
+    var container = document.getElementById("block4");
+    container.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToContainerContact(event) {
+    toggleOverflow();
+    event.preventDefault();
+    var container = document.getElementById("block7");
+    container.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+  const themeBtn = document.getElementById('theme-btn');
+  const headera = document.getElementById('header');
+  const aTag = document.getElementsByTagName('a');
+  const ulM = document.getElementById('list');
+  const h1W = document.getElementsByTagName('h1');
+  const liTag = document.getElementsByTagName('li');
+  const body = document.getElementsByTagName('body');
+  const footer = document.getElementsByTagName('footer');
+  const currentTheme = localStorage.getItem('theme');
+
+
+  if (currentTheme) {
+    applyTheme(currentTheme);
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      //Header
+      themeBtn.textContent = '🌑';
+      headera.style.backgroundColor = '#000';
+      document.getElementById('icono').src = "Images/imgIco/menu.webp";
+      toggleOverflow();
+
+      //Blocks
+      document.getElementById('block1').style.backgroundColor = '#062029';
+      document.getElementById('block2').style.backgroundColor = '#102F37';
+      document.getElementById('block3').style.backgroundColor = '#1A3F45';
+      document.getElementById('block4').style.backgroundColor = '#245054';
+      document.getElementById('block5').style.backgroundColor = '#1A3F45';
+      document.getElementById('block6').style.backgroundColor = '#324252';
+      //Text
+      mainText1.style.color = '#fff';
+      document.getElementById('block1_0').style.color = 'aquamarine';
+      document.getElementById('skills-description').style.color = '#98D8DA';
+      document.getElementById('in-process-skills-description').style.color = 'aquamarine';
+      document.getElementById('quote-text').style.color = 'rgb(152, 216, 218)';
+
+      //Footer-SM
+      document.getElementById('tikt').src = "Images/imgLogos/TiktokW.webp";
+      document.getElementById('insta').src = "Images/imgLogos/InstagramW.webp";
+      document.getElementById('gith').src = "Images/imgLogos/GithubW.webp";
+      document.getElementById('yout').src = "Images/imgLogos/YoutubeW.webp";
+      document.getElementById('linke').src = "Images/imgLogos/LinkedinW.webp";
+
+      //Loops-TagName
+      document.body.style.backgroundColor = 'black';
+
+      document.querySelectorAll('footer').forEach(footer => {
+        footer.style.backgroundColor = 'black';
+        footer.style.color = 'white';
+      });
+
+      document.querySelectorAll('h1').forEach(h1 => {
+        h1.style.color = 'white';
+      });
+
+      document.querySelectorAll('a').forEach(a => {
+        a.style.color = 'white';
+      });
+
+      document.querySelectorAll('li').forEach(li => {
+        li.style.backgroundColor = 'black';
+      });
+
+    } else if (theme === 'light') {
+      //Header
+      themeBtn.textContent = '☀️';
+      headera.style.backgroundColor = '#fff';
+      document.getElementById('icono').src = "Images/imgIco/menub.webp";
+      toggleOverflow()
+
+      //Blocks
+      document.getElementById('block1').style.backgroundColor = '#C0BBAD';
+      document.getElementById('block2').style.backgroundColor = '#D7D5CA';
+      document.getElementById('block3').style.backgroundColor = '#EAE8E0';
+      document.getElementById('block4').style.backgroundColor = '#FCFBF7';
+      document.getElementById('block5').style.backgroundColor = '#D7D5CA';
+      document.getElementById('block6').style.backgroundColor = '#EAE8E0';
+      //Text
+      mainText1.style.color = '#000';
+      document.getElementById('block1_0').style.color = 'indigo';
+      document.getElementById('skills-description').style.color = 'mediumblue';
+      document.getElementById('in-process-skills-description').style.color = 'indigo';
+      document.getElementById('quote-text').style.color = 'mediumblue';
+
+      //Footer-SM
+      document.getElementById('tikt').src = "Images/imgLogos/TiktokB.webp";
+      document.getElementById('insta').src = "Images/imgLogos/InstagramB.webp";
+      document.getElementById('gith').src = "Images/imgLogos/GithubB.webp";
+      document.getElementById('yout').src = "Images/imgLogos/YoutubeB.webp";
+      document.getElementById('linke').src = "Images/imgLogos/LinkedinB.webp";
+
+      //Loops-TagName
+      for (let i = 0; i < footer.length; i++) {
+        footer[i].style.backgroundColor = 'white';
+        footer[i].style.color = 'black';
+      }
+      for (let i = 0; i < body.length; i++) {
+        body[i].style.backgroundColor = 'white';
+      }
+      for (let i = 0; i < h1W.length; i++) {
+        h1W[i].style.color = 'black';
+      }
+
+      for (let i = 0; i < aTag.length; i++) {
+        aTag[i].style.color = 'black';
+      }
+      for (let i = 0; i < liTag.length; i++) {
+        liTag[i].style.backgroundColor = 'white';
+      }
+
+    }
+  }
+
+  themeBtn.addEventListener('click', function () {
+    if (themeBtn.textContent === '🌑') {
+      applyTheme('light');
+      localStorage.setItem('theme', 'light');
+    } else if (themeBtn.textContent === '☀️') {
+      applyTheme('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme) {
+      applyTheme(currentTheme);
+    } else {
+      applyTheme("light");
+    }
+  });
+</script>
+<script>
+  function changeLanguage(language, jsonData) {
+    const languageData = jsonData[language];
+
+    document.getElementById('skills').innerText = languageData.about.skills;
+    document.getElementById('projectsmain').innerText = languageData.about.projects;
+    document.getElementById('block1_0').innerText = languageData.about.block1_0;
+    document.getElementById('block1_1').innerText = languageData.about.block1_1;
+    document.getElementById('block1_2').innerText = languageData.about.block1_2;
+    document.getElementById('mainText1').innerText = languageData.about.description;
+
+
+    document.getElementById('skills-title').innerText = languageData.skills.title;
+    document.getElementById('skills-description').innerText = languageData.skills.description;
+
+    document.getElementById('in-process-skills-title').innerText = languageData.inProcessSkills.title;
+    document.getElementById('in-process-skills-description').innerText = languageData.inProcessSkills.description;
+
+    document.getElementById('projects-description').innerText = languageData.projects.description;
+    document.getElementById('backend-description').innerText = languageData.backend.description;
+
+    document.getElementById('pr1').innerText = languageData.projects.pr1;
+    document.getElementById('pr1_1').innerText = languageData.projects.pr1_1;
+    document.getElementById('pr2').innerText = languageData.projects.pr2;
+    document.getElementById('pr2_1').innerText = languageData.projects.pr2_1;
+    document.getElementById('pr3').innerText = languageData.projects.pr3;
+    document.getElementById('pr3_1').innerText = languageData.projects.pr3_1;
+    document.getElementById('pr4').innerText = languageData.projects.pr4;
+    document.getElementById('pr4_1').innerText = languageData.projects.pr4_1;
+
+    document.getElementById('bk1').innerText = languageData.backend.bk1;
+    document.getElementById('bk1_1').innerText = languageData.backend.bk1_1;
+    document.getElementById('bk2').innerText = languageData.backend.bk2;
+    document.getElementById('bk2_1').innerText = languageData.backend.bk2_1;
+    document.getElementById('bk3').innerText = languageData.backend.bk3;
+    document.getElementById('bk3_1').innerText = languageData.backend.bk3_1;
+    document.getElementById('bk4').innerText = languageData.backend.bk4;
+    document.getElementById('bk4_1').innerText = languageData.backend.bk4_1;
+    document.getElementById('bk5').innerText = languageData.backend.bk5;
+    document.getElementById('bk5_1').innerText = languageData.backend.bk5_1;
+    document.getElementById('bk6').innerText = languageData.backend.bk6;
+    document.getElementById('bk6_1').innerText = languageData.backend.bk6_1;
+
+    document.getElementById('quote-title').innerText = languageData.quote.title;
+    document.getElementById('quote-text').innerText = languageData.quote.text;
+
+
+    const languageBtn = document.getElementById('boton');
+    languageBtn.textContent = languageData.buttons[language];
+
+    localStorage.setItem('language', language);
+
+  }
+
+
+  // Check local storage for language preference on page load
+  document.addEventListener("DOMContentLoaded", async () => {
+    const selectedLanguage = localStorage.getItem('language') || 'en';
+    const response = await fetch('JS/text.json');
+    const jsonData = await response.json();
+
+    changeLanguage(selectedLanguage, jsonData);
+  });
+
+  const languageBtn = document.getElementById('boton');
+  languageBtn.addEventListener('click', async () => {
+    const currentLanguage = languageBtn.textContent;
+    const newLanguage = currentLanguage === 'ES' ? 'en' : 'es';
+    const response = await fetch('JS/text.json');
+    const jsonData = await response.json();
+
+    changeLanguage(newLanguage, jsonData);
+    toggleOverflow();
+  });
+</script>
+
+</html>
